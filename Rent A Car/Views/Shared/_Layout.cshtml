@@ -1,41 +1,91 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Rent_A_Car.Models.ApplicationUser> signinManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Rent_A_Car</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Emre Erdem Site</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/site.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Ramble Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+        <div class="header">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Rent_A_Car</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="header-info navbar-left fadeInLeft animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                    <p>Klanten Service : 000-1234-1234</p>
                 </div>
+                <form class="navbar-form navbar-left fadeInRight animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                </form>
             </div>
-        </nav>
+        </div>
+        @if (signinManager.IsSignedIn(User) && User.IsInRole("Beheerder"))
+        {
+            <div>
+                <partial name="_BeheerderMenuBar" />
+            </div>
+        }
+
+        else if (signinManager.IsSignedIn(User) && User.IsInRole("Medewerker"))
+        {
+            <div>
+                <partial name="_MedewerkerMenuBar" />
+            </div>
+        }
+
+        else if (signinManager.IsSignedIn(User) && User.IsInRole("Klant"))
+        {
+            <div>
+                <partial name="_KlantMenuBar" />
+            </div>
+        }
+
+        else
+        {
+            <div>
+                <nav class="navbar navbar-default">
+                    <div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-left">
+
+                                <li class="hvr-bounce-to-bottom"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="hvr-bounce-to-bottom"><a class="scroll">Over Ons</a></li>
+
+                                <li class="hvr-bounce-to-bottom"><a asp-controller="Home" asp-action="ContactUs" class="scroll">Contact Pagina</a></li>
+
+                                <li class="hvr-bounce-to-bottom"><a class="scroll" asp-action="Register" asp-controller="Account">Registreren</a></li>
+                                <li class="hvr-bounce-to-bottom"><a class="scroll" asp-action="Login" asp-controller="Account">Inloggen</a></li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        }
+
+        <!--//header-->
+        <!--navigation-->
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class=" footer text-muted">
         <div class="container">
             &copy; 2021 - Rent_A_Car - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

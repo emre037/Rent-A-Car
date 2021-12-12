@@ -1,0 +1,42 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Rent_A_Car.Models.ApplicationUser> signinManager
+
+
+@if (signinManager.IsSignedIn(User) && User.IsInRole("Beheerder"))
+{
+    <div class="top-nav">
+        <nav class="navbar navbar-default">
+
+
+            <div>
+
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-left" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="hvr-bounce-to-bottom active">
+                            <a id="vehicleRegisterLink" class="nav-link" asp-action="Index" asp-controller="Home">Homepagina</a>
+                        </li>
+
+                        <li class="hvr-bounce-to-bottom"> <a id="vehicleRegisterLink" class="nav-link" asp-action="Index" asp-controller="VoertuigRegistratie">Registreer Voertuig</a> </li>
+                        <li class="hvr-bounce-to-bottom"><a asp-action="ContactUs" asp-controller="Home" class="scroll">Contact Pagina</a></li>
+                        <li class="hvr-bounce-to-bottom"><a  asp-action="OverzichtMedewerker" asp-controller="Account" class="scroll">Overzicht van medewerkers</a></li>
+                        <li class="hvr-bounce-to-bottom"><a>Welkom @User.Identity.Name</a></li>
+
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+                <form method="post" id="logoutForm" asp-action="Logoff" asp-controller="Account">
+                    <ul class="nav navbar-nav">
+                
+                        <li class="hvr-bounce-to-bottom">
+                            <a id="logoffLink" class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Uitloggen</a>
+                        </li>
+                    </ul>
+                </form>
+
+            </div>
+        </nav>
+    </div>
+}
+
+

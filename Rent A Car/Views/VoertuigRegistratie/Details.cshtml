@@ -1,0 +1,87 @@
+﻿@model Rent_A_Car.Models.VoertuigRegistratie
+    <div>
+        <div class="loginPage">
+            <div class="loginContainer1">
+                <div class="loginLogo">
+                    <div>
+                        <h4>VoertuigRegistratie</h4>
+                        <hr />
+                        <dl>
+                    </div>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Merk)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Merk)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Dagprijs)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Dagprijs)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Type)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Kenteken)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Kenteken)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Schakelaar)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Schakelaar)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Brandstof)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Brandstof)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AantalZitPlaats)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AantalZitPlaats)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Airco)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Airco)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AantalDeur)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AantalDeur)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BeginDatum)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.BeginDatum)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AantalDagen)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.AantalDagen)
+                    </dd>
+                    </dl>
+                </div>
+                    <div>
+                        <a asp-action="Edit" asp-route-id="@Model.VoertuigId">Edit</a> |
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
