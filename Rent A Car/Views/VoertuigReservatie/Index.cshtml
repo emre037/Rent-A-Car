@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Rent_A_Car.Models.VoertuigReservatie>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KlantId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutoType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BeginDatum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EindDatum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KlantId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutoType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeginDatum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EindDatum)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

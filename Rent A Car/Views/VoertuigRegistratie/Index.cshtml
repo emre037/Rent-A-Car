@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Rent_A_Car.Models.VoertuigRegistratie>
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/lightbox.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+    </head>
+    <body>
+        <div class="loginPage">
+            <div class="loginContainer">
+                <div class="wittevak">
+                    <div class="loginLogo">
+                        <img id="loginLogo1" src="~/lib/Images/carpng1.png" />
+                    </div>
+                    <p>
+                        <a asp-action="Create">Create New</a>
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Merk)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Dagprijs)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Type)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Kenteken)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Schakelaar)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Brandstof)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AantalZitPlaats)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Airco)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AantalDeur)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BeginDatum)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AantalDagen)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Merk)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Dagprijs)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Kenteken)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Schakelaar)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Brandstof)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AantalZitPlaats)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Airco)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AantalDeur)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BeginDatum)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AantalDagen) 
+                                    </td>
+                                    <td>
+                                        
+                                        <a id="adminbutton" asp-route-id="@item.VoertuigId">Edit</a> |
+                                        <a id="adminbutton" asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
+                                        <a id="adminbutton" asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
+                                        <a id="adminbutton" asp-action="Factuur" asp-route-id="@item.ApplicationUser">Factuur</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        </body>

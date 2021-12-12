@@ -6,16 +6,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Rent_A_Car.Models;
 
 namespace Rent_A_Car.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+     
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+         
         }
 
         public IActionResult Index()
@@ -27,7 +29,12 @@ namespace Rent_A_Car.Controllers
         {
             return View();
         }
-
+        
+          public IActionResult ContactUs()
+        {
+            return View();
+        }
+      
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
