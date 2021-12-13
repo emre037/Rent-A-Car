@@ -163,5 +163,6 @@ namespace Rent_A_Car.Controllers
             return View(await applicationDbContext.ToListAsync());
 
         }
+     
     }
 }

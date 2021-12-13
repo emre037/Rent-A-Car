@@ -66,6 +66,7 @@ namespace Rent_A_Car.Models
         [DisplayName("Rol*")]
         [Required(ErrorMessage = "{0} dit veld is verplicht.")]
         public string RoleName { get; set; }
-
+        public ApplicationUser ApplicationUser { get; set; }
+        public string ApplicationUserId { get; set; }
     }
 }
