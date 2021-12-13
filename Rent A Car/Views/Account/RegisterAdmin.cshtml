@@ -118,7 +118,7 @@
                         <label class="col-md-2" asp-for="RoleName"></label>
                         <div class="col-md-10">
                             <select asp-for="RoleName"
-                                    asp-items="@CCSB_Emre_Erdem.Utility.Helper.GetRolesForDropDown(User.IsInRole(CCSB_Emre_Erdem.Utility.Helper.Customer))"
+                                          asp-items="@CCSB_Emre_Erdem.Utility.Helper.AdminRolesForDropDown(User.IsInRole(CCSB_Emre_Erdem.Utility.Helper.Customer))"
                                     class="form-control">
                                 <option selected>-- Selecteer rol</option>
                             </select>

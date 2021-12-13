@@ -1,36 +1,54 @@
 ﻿@model Rent_A_Car.Models.VoertuigReservatie
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/lightbox.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
 
-<div>
-    <h4>VoertuigReservatie</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.KlantId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.KlantId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AutoType)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AutoType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BeginDatum)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BeginDatum)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EindDatum)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EindDatum)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.VoertuigId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+    </head>
+    <body>
+        <div class="loginPage2">
+            <div class="loginContainer">
+                <div class="wittevak2">
+                    <div class="loginLogo">
+                        <img id="loginLogo2" src="~/lib/Images/carpng1.png" />
+
+                    </div>
+
+                    <hr />
+
+                </div>
+                <dl id="details">
+                    <h2>Details</h2>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.KlantId)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.KlantId)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.AutoType)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.AutoType)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.BeginDatum)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.BeginDatum)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.EindDatum)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.EindDatum)
+                    </dd>
+                    <a asp-action="Edit" asp-route-id="@Model.VoertuigId">Edit</a> |
+                    <a asp-action="Index">Back to List</a>
+                </dl>
+            </div>
+          
+            </body>

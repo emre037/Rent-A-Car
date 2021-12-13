@@ -1,47 +1,66 @@
 ﻿@model IEnumerable<Rent_A_Car.Models.VoertuigReservatie>
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/lightbox.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.KlantId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AutoType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeginDatum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EindDatum)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.KlantId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AutoType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeginDatum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EindDatum)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    </head>
+    <body>
+        <div class="loginPage2">
+            <div class="loginContainer">
+                <div class="wittevak2">
+                    <div class="loginLogo">
+                        <img id="loginLogo2" src="~/lib/Images/carpng1.png" />
+                        <h2>Reservaties</h2>
+                    </div>
+                    <p>
+                        <a asp-action="Create">Create New</a>
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.KlantId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AutoType)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BeginDatum)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.EindDatum)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.KlantId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AutoType)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BeginDatum)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.EindDatum)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
+                                   
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    </body>

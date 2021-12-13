@@ -14,7 +14,9 @@
                 <div class="wittevak">
                     <div class="loginLogo">
                         <img id="loginLogo1" src="~/lib/Images/carpng1.png" />
+
                     </div>
+                  <strong > Registreerde Voertuigen</strong>
                     <p>
                         <a asp-action="Create">Create New</a>
                     </p>
@@ -94,11 +96,11 @@
                                         @Html.DisplayFor(modelItem => item.BeginDatum)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.AantalDagen) 
+                                        @Html.DisplayFor(modelItem => item.AantalDagen)
                                     </td>
                                     <td>
-                                        
-                                        <a id="adminbutton" asp-route-id="@item.VoertuigId">Edit</a> |
+
+                                        <a id="adminbutton" asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
                                         <a id="adminbutton" asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
                                         <a id="adminbutton" asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
                                         <a id="adminbutton" asp-action="Factuur" asp-route-id="@item.ApplicationUser">Factuur</a>

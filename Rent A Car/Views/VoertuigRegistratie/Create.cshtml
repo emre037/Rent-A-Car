@@ -1,10 +1,22 @@
 ﻿@model Rent_A_Car.Models.VoertuigRegistratie
-    <div>
-        <div class="loginPage">
-            <div class="loginContainer1">
-                <div class="loginLogo">
-                    <h4>VoertuigRegistratie</h4>
-                    <hr />
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/lightbox.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+    </head>
+    <body>
+        <div class="loginPage2">
+            <div class="loginContainer">
+                <div class="wittevak2">
+                    <div class="loginLogo">
+                        <img id="loginLogo2" src="~/lib/Images/carpng1.png" />
+                        <h2>Create</h2>
+                    </div>
+                
                     <div class="row">
                         <div class="col-md-4">
                             <form asp-action="Create">
@@ -80,7 +92,8 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+    </body>
     @section Scripts {
-        @{await Html.RenderPartialAsync("_Validationtial");}
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     }

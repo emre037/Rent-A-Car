@@ -1,43 +1,57 @@
 ﻿@model Rent_A_Car.Models.VoertuigReservatie
+    <head>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/lightbox.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
 
-<h4>VoertuigReservatie</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="VoertuigId" />
-            <div class="form-group">
-                <label asp-for="KlantId" class="control-label"></label>
-                <input asp-for="KlantId" class="form-control" />
-                <span asp-validation-for="KlantId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AutoType" class="control-label"></label>
-                <input asp-for="AutoType" class="form-control" />
-                <span asp-validation-for="AutoType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BeginDatum" class="control-label"></label>
-                <input asp-for="BeginDatum" class="form-control" />
-                <span asp-validation-for="BeginDatum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EindDatum" class="control-label"></label>
-                <input asp-for="EindDatum" class="form-control" />
-                <span asp-validation-for="EindDatum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+    </head>
+    <body>
+        <div class="loginPage2">
+            <div class="loginContainer">
+                <div class="wittevak2">
+                    <div class="loginLogo">
+                        <img id="loginLogo2" src="~/lib/Images/carpng1.png" />
+                        <h2>Edit</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="VoertuigId" />
+                                <div class="form-group">
+                                    <label asp-for="KlantId" class="control-label"></label>
+                                    <input asp-for="KlantId" class="form-control" />
+                                    <span asp-validation-for="KlantId" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="AutoType" class="control-label"></label>
+                                    <input asp-for="AutoType" class="form-control" />
+                                    <span asp-validation-for="AutoType" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="BeginDatum" class="control-label"></label>
+                                    <input asp-for="BeginDatum" class="form-control" />
+                                    <span asp-validation-for="BeginDatum" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="EindDatum" class="control-label"></label>
+                                    <input asp-for="EindDatum" class="form-control" />
+                                    <span asp-validation-for="EindDatum" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+                    <div>
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                    </body>
+                    @section Scripts {
+                        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                    }

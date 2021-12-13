@@ -117,6 +117,73 @@ namespace Rent_A_Car.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> RegisterAdmin()
+        {
+
+            // Create all roler if role admin not exists
+            if (!_roleManager.RoleExistsAsync(Helper.Medewerker).GetAwaiter().GetResult())
+            {
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Medewerker));
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Customer));
+                await _roleManager.CreateAsync(new IdentityRole(Helper.Beheerder));
+            }
+            return View();
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterAdmin(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = new ApplicationUser()
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+
+                    MiddleName = model.MiddleName,
+                    LastName = model.LastName
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    // Assign role to user and log the user in and redirect to the homepage
+                    await _userManager.AddToRoleAsync(user, model.RoleName);
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    var message = new MimeMessage();
+                    message.From.Add(new MailboxAddress("Registratie", "ccsbcampersite@gmail.com"));
+                    message.To.Add(new MailboxAddress(model.FirstName, model.Email));
+                    message.Subject = "Bedankt voor het registreren";
+                    message.Body = new TextPart("plain")
+                    {
+                        Text = "Beste " + model.FirstName + ",\n" + "Er is zojuist een account geregistreerd bij camper-en carvan stalling Bentelo. " +
+                        "U kunt inloggen met de volgende gegevens:" + "\n" + "\n" + "Email: " + model.Email + "\n" + "Wachtwoord: " + model.Password + "\n" +
+                        "\n" + "Als deze gegevens niet kloppen of als deze email niet voor u bestemd is, kan je altijd bellen naar: 0687654321" + "\n" +
+                        "Met vriendelijke groet," + "\n" + "CCBS"
+                    };
+                    using (var client = new SmtpClient())
+                    {
+                        client.Connect("smtp.gmail.com", 587, false);
+                        client.Authenticate("ccsbcampersite@gmail.com", "CCSB@123");
+
+                        client.Send(message);
+
+                        client.Disconnect(true);
+                    }
+                    return RedirectToAction("Index", "Home");
+
+
+                }
+                // Add all errors to the modelstate
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+            return View();
+        }
         [HttpPost]
         public async Task<IActionResult> LogOff()
         {

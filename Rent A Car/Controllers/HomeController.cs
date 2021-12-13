@@ -36,7 +36,10 @@ namespace Rent_A_Car.Controllers
         {
             return View();
         }
-  
+        public IActionResult Overons()
+        {
+            return View();
+        }
         public async Task<IActionResult> OverzichtMedewerker(string id)
         {
             var applicationDbContext = _context.RegisterViewModel.Include(v => v.ApplicationUser);
