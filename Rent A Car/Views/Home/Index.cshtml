@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="~/css/font-awesome.css" />
 
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <link href="~/js/jquery-1.11.1.min.js"/>
+    <link href="~/js/jquery-1.11.1.min.js" />
+    <script src="js/bootstrap.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
+    <script src="~/js/responsiveslides.min.js"></script>
 </head>
 <body>
 
@@ -52,28 +54,8 @@
             </div>
         </div>
     </div>
-    <script src="~/js/responsiveslides.min.js"></script>
-    <script>
-   
-        $(function () {
-         
-            $("#slider3").responsiveSlides({
-                auto: true,
-                pager: true,
-                nav: true,
-                speed: 500,
-                namespace: "callbacks",
-                before: function () {
-                    $('.events').append("<li>before event fired.</li>");
-                },
-                after: function () {
-                    $('.events').append("<li>after event fired.</li>");
 
-                }
 
-            });
-        });
-    </script>
 
     <h3 class="title"></br>Contact Ons</h3>
     <div class="col-md-7 contact-right  fadeInLeft animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
@@ -98,6 +80,6 @@
     <div class="clearfix"> </div>
 
 
-    <script src="js/bootstrap.js"></script>
+ 
 </body>
 </html>

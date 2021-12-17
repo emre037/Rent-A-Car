@@ -56,7 +56,7 @@ namespace Rent_A_Car.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VoertuigId,MedewerkerId,Merk,Dagprijs,Type,Kenteken,Schakelaar,Brandstof,ApplicationUserId,TotalePrijs,AantalZitPlaats,Airco,AantalDeur,ApplicationUser,BeginDatum,AantalDagen")] VoertuigRegistratie voertuigRegistratie)
+        public async Task<IActionResult> Create([Bind("VoertuigId,MedewerkerId,Merk,Dagprijs,Type,Kenteken,Schakelaar,Brandstof,ApplicationUserId,TotalePrijs,AantalZitPlaats,Airco,AantalDeur,ApplicationUser,BeginDatum,EindDatum,AantalDagen")] VoertuigRegistratie voertuigRegistratie)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace Rent_A_Car.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VoertuigId,MedewerkerId,Merk,Dagprijs,Type,Kenteken,Schakelaar,Brandstof,ApplicationUserId,TotalePrijs,AantalZitPlaats,Airco,AantalDeur,ApplicationUser,BeginDatum,AantalDagen")] VoertuigRegistratie voertuigRegistratie)
+        public async Task<IActionResult> Edit(int id, [Bind("VoertuigId,MedewerkerId,Merk,Dagprijs,Type,Kenteken,Schakelaar,Brandstof,ApplicationUserId,TotalePrijs,AantalZitPlaats,Airco,AantalDeur,ApplicationUser,BeginDatum,EindDatum,AantalDagen")] VoertuigRegistratie voertuigRegistratie)
         {
             if (id != voertuigRegistratie.VoertuigId)
             {

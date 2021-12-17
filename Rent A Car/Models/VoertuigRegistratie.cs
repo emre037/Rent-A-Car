@@ -21,6 +21,7 @@ namespace Rent_A_Car.Models
         public bool Airco { get; set; }
         public string AantalDeur { get; set; }
         public DateTime BeginDatum { get; set; }
+        public DateTime EindDatum { get; set; }
         public int AantalDagen { get; set; }
         public double TotalePrijs
         {

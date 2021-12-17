@@ -148,5 +148,13 @@ namespace Rent_A_Car.Controllers
         {
             return _context.VoertuigReservatie.Any(e => e.VoertuigId == id);
         }
+        public async Task<IActionResult> Factuur(string id)
+        {
+            var applicationDbContext = _context.VoertuigReservatie.Include(v => v.ApplicationUser);
+
+
+            return View(await applicationDbContext.ToListAsync());
+
+        }
     }
 }

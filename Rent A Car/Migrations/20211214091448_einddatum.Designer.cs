@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rent_A_Car.Models;
 
 namespace Rent_A_Car.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211214091448_einddatum")]
+    partial class einddatum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -424,9 +426,6 @@ namespace Rent_A_Car.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("AutoType")
                         .HasColumnType("nvarchar(max)");
 
@@ -440,8 +439,6 @@ namespace Rent_A_Car.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("VoertuigId");
-
-                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("VoertuigReservatie");
                 });
@@ -516,15 +513,6 @@ namespace Rent_A_Car.Migrations
                 });
 
             modelBuilder.Entity("Rent_A_Car.Models.VoertuigRegistratie", b =>
-                {
-                    b.HasOne("Rent_A_Car.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("ApplicationUserId");
-
-                    b.Navigation("ApplicationUser");
-                });
-
-            modelBuilder.Entity("Rent_A_Car.Models.VoertuigReservatie", b =>
                 {
                     b.HasOne("Rent_A_Car.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()

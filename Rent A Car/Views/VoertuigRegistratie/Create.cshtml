@@ -14,85 +14,114 @@
                 <div class="wittevak2">
                     <div class="loginLogo">
                         <img id="loginLogo2" src="~/lib/Images/carpng1.png" />
-                        <h2>Create</h2>
+             
                     </div>
-                
-                    <div class="row">
-                        <div class="col-md-4">
-                            <form asp-action="Create">
-                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="tekstmid">
+              
+                        <div class="row">
+                        
+                            <div class="col-md-4">
+                                <h2>Create</h2>
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                                <div class="form-group">
-                                    <label asp-for="Merk" class="control-label"></label>
-                                    <input asp-for="Merk" class="form-control" />
-                                    <span asp-validation-for="Merk" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Dagprijs" class="control-label"></label>
-                                    <input asp-for="Dagprijs" class="form-control" />
-                                    <span asp-validation-for="Dagprijs" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Type" class="control-label"></label>
-                                    <input asp-for="Type" class="form-control" />
-                                    <span asp-validation-for="Type" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Kenteken" class="control-label"></label>
-                                    <input asp-for="Kenteken" class="form-control" />
-                                    <span asp-validation-for="Kenteken" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Schakelaar" class="control-label"></label>
-                                    <input asp-for="Schakelaar" class="form-control" />
-                                    <span asp-validation-for="Schakelaar" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Brandstof" class="control-label"></label>
-                                    <input asp-for="Brandstof" class="form-control" />
-                                    <span asp-validation-for="Brandstof" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="AantalZitPlaats" class="control-label"></label>
-                                    <input asp-for="AantalZitPlaats" class="form-control" />
-                                    <span asp-validation-for="AantalZitPlaats" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input asp-for="Airco" /> @Html.DisplayNameFor(model => model.Airco)
-                                        </label>
+                                    <div class="form-group">
+                                        <label asp-for="Merk" class="control-label"></label>
+                                        <input asp-for="Merk" class="form-control" />
+                                        <span asp-validation-for="Merk" class="text-danger"></span>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="AantalDeur" class="control-label"></label>
-                                    <input asp-for="AantalDeur" class="form-control" />
-                                    <span asp-validation-for="AantalDeur" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="BeginDatum" class="control-label"></label>
-                                    <input asp-for="BeginDatum" class="form-control" />
-                                    <span asp-validation-for="BeginDatum" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="BeginDatum" class="control-label"></label>
-                                    <input asp-for="AantalDagen" class="form-control" />
-                                    <span asp-validation-for="AantalDagen" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Create" class="btn btn-default" />
-                                </div>
-                            </form>
+                                    <div class="form-group">
+                                        <label asp-for="Dagprijs" class="control-label"></label>
+                                        <input asp-for="Dagprijs" class="form-control" />
+                                        <span asp-validation-for="Dagprijs" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Type" class="control-label"></label>
+                                        <input asp-for="Type" class="form-control" />
+                                        <span asp-validation-for="Type" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Kenteken" class="control-label"></label>
+                                        <input asp-for="Kenteken" class="form-control" />
+                                        <span asp-validation-for="Kenteken" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Schakelaar" class="control-label"></label>
+                                        <select asp-for="Schakelaar" class="form-control">
+                                            <option>Handgeschakeld</option>
+                                            <option>Automaat</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Brandstof" class="control-label"></label>
+                                        <select asp-for="Brandstof" class="form-control">
+                                            <option>Benzine</option>
+                                            <option>Diesel</option>
+                                            <option>Elektrisch</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AantalZitPlaats" class="control-label"></label>
+                                        <select asp-for="AantalZitPlaats" class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input asp-for="Airco" /> @Html.DisplayNameFor(model => model.Airco)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AantalDeur" class="control-label"></label>
+                                        <select asp-for="AantalDeur" class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="BeginDatum" class="control-label"></label>
+                                        <input asp-for="BeginDatum" class="form-control" />
+                                        <span asp-validation-for="BeginDatum" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="EindDatum" class="control-label"></label>
+                                        <input asp-for="EindDatum" class="form-control" />
+                                        <span asp-validation-for="EindDatum" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="AantalDagen" class="control-label"></label>
+                                        <input asp-for="AantalDagen" class="form-control" />
+                                        <span asp-validation-for="AantalDagen" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Create" class="btn btn-default" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a asp-action="Index">Back to List</a>
                         </div>
                     </div>
-
-                    <div>
-                        <a asp-action="Index">Back to List</a>
-                    </div>
-                </div>
             </div>
         </div>
         </div>
+        
     </body>
     @section Scripts {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

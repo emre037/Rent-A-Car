@@ -1267,7 +1267,8 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 30px;
+    font-size: 30px;
+    padding-bottom: 1em;
 }
 h3,
 .h3 {
@@ -1938,7 +1939,7 @@ pre code {
     width: 75%;
   }
   .col-md-8 {
-    width: 66.66666667%;
+
   }
   .col-md-7 {
     width: 58.33333333%;
@@ -4411,12 +4412,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #333;
   background-color: transparent;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
-}
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: white;
+        background-color: #3f5475;
+    }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {

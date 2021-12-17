@@ -14,5 +14,7 @@ namespace Rent_A_Car.Models
         public string AutoType { get; set; }
         public DateTime BeginDatum { get; set; }
         public DateTime EindDatum { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+        public string ApplicationUserId { get; set; }
     }
 }

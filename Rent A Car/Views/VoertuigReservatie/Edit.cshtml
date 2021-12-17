@@ -21,11 +21,7 @@
                             <form asp-action="Edit">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <input type="hidden" asp-for="VoertuigId" />
-                                <div class="form-group">
-                                    <label asp-for="KlantId" class="control-label"></label>
-                                    <input asp-for="KlantId" class="form-control" />
-                                    <span asp-validation-for="KlantId" class="text-danger"></span>
-                                </div>
+                          
                                 <div class="form-group">
                                     <label asp-for="AutoType" class="control-label"></label>
                                     <input asp-for="AutoType" class="form-control" />

@@ -54,6 +54,8 @@
                                 <th>
                                     @Html.DisplayNameFor(model => model.BeginDatum)
                                 </th>
+                                <th>@Html.DisplayNameFor(model => model.EindDatum)
+                                </th>
                                 <th>
                                     @Html.DisplayNameFor(model => model.AantalDagen)
                                 </th>
@@ -63,49 +65,52 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
+                            <tr>
 
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Merk)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Dagprijs)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Type)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Kenteken)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Schakelaar)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Brandstof)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.AantalZitPlaats)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Airco)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.AantalDeur)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.BeginDatum)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.AantalDagen)
-                                    </td>
-                                    <td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Merk)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Dagprijs)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Type)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Kenteken)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Schakelaar)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Brandstof)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AantalZitPlaats)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Airco)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AantalDeur)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BeginDatum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EindDatum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AantalDagen)
+                                </td>
+                                <td>
 
-                                        <a id="adminbutton" asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
-                                        <a id="adminbutton" asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
-                                        <a id="adminbutton" asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
-                                        <a id="adminbutton" asp-action="Factuur" asp-route-id="@item.ApplicationUser">Factuur</a>
-                                    </td>
-                                </tr>
+                                    <a id="adminbutton" asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
+                                    <a id="adminbutton" asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
+                                    <a id="adminbutton" asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
+                                    <a id="adminbutton" asp-action="Factuur" asp-route-id="@item.ApplicationUser">Factuur</a>
+                                </td>
+                            </tr>
                             }
                         </tbody>
                     </table>

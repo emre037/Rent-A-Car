@@ -41,7 +41,7 @@
                             <div>Email:  cvanderstal@gmail.com</div>
                             <div>Phone: 06-01928374</div>
                         </div>
-                        <h6 id="To">To:</h6>
+                        <h6 id="To">To: </h6>
                         <div id="stukjeklant" class="col-sm-6">
 
 
@@ -51,7 +51,7 @@
                                     {
                                         <tr>
                                             <th>
-                                                <strong>  @Html.DisplayFor(modelItem => item.ApplicationUser.FullName)</strong>
+                                                <strong> Customer @Html.DisplayFor(modelItem => item.ApplicationUser.FullName)</strong>
                                             </th>
                                             <th></th>
 
@@ -64,11 +64,11 @@
                                     {
                                         <tr>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.AantalZitPlaats)<br />
-                                                @Html.DisplayFor(modelItem => item.AantalDagen)<br />
+                                                Sneliusstraat 23<br />
+                                                Enschede(Overijssel)<br />
 
-                                                Email:   @Html.DisplayFor(modelItem => item.ApplicationUser.Email)<br />
-                                                Phone:   @Html.DisplayFor(modelItem => item.AantalDagen)<br />
+                                                Email:   @User.Identity.Name)<br />
+                                                Phone:   0621382475<br />
                                             </td>
 
                                         </tr>
@@ -87,11 +87,11 @@
 
                                     <tr>
                                         <th class="center">#</th>
-                                        <th>Factuur</th>
+                                        <th>Auto Merk</th>
                                         <th>Description</th>
 
-                                        <th class="right">Kosten</th>
-                                        <th class="center">Lengte in meters</th>
+                                        <th class="right">Dag Prijs</th>
+                                        <th class="center">Auto Type</th>
                                         <th class="right">Totale Kosten</th>
                                     </tr>
 
@@ -105,16 +105,16 @@
                                         <tr>
 
                                             <td class="center">1</td>
-                                            <td class="left strong">De Huur</td>
-                                            <td class="left"> je betaalt 45 euro per meter </td>
+                                            <td class="left strong"> @Html.DisplayFor(modelItem => item.Merk)</td>
+                                            <td class="left"> je betaalt @Html.DisplayFor(modelItem => item.Dagprijs) euro per dag </td>
 
-                                            <td id="Getal1" class="right">€45,00</td>
+                                            <td id="Getal1" class="right"> @Html.DisplayFor(modelItem => item.Dagprijs)</td>
 
                                             <td id="Getal2" class="center"> @Html.DisplayFor(modelItem => item.Type)</td>
                                             <td class="right">
                                                 <label for="result"></label>
 
-                                                @Html.DisplayFor(modelItem => item.Dagprijs)
+                                                @Html.DisplayFor(modelItem => item.TotalePrijs)
                                             </td>
 
                                         </tr>
