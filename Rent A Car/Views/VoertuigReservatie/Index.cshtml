@@ -1,13 +1,17 @@
 ﻿@model IEnumerable<Rent_A_Car.Models.VoertuigReservatie>
-    <head>
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/animate.css" />
-        <link rel="stylesheet" href="~/css/lightbox.css" />
-        <link rel="stylesheet" href="~/css/font-awesome.css" />
-        <script src="js/jquery-1.11.1.min.js"></script>
+@inject Microsoft.AspNetCore.Identity.SignInManager<Rent_A_Car.Models.ApplicationUser> signinManager
 
-    </head>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/animate.css" />
+    <link rel="stylesheet" href="~/css/lightbox.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.css" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+@if (signinManager.IsSignedIn(User))
+{
     <body>
         <div class="loginPage2">
             <div class="loginContainer">
@@ -22,7 +26,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                         
+
                                 <th>
                                     @Html.DisplayNameFor(model => model.AutoType)
                                 </th>
@@ -39,7 +43,7 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                 
+
                                     <td>
                                         @Html.DisplayFor(modelItem => item.AutoType)
                                     </td>
@@ -53,10 +57,17 @@
                                         <a asp-action="Edit" asp-route-id="@item.VoertuigId">Edit</a> |
                                         <a asp-action="Details" asp-route-id="@item.VoertuigId">Details</a> |
                                         <a asp-action="Delete" asp-route-id="@item.VoertuigId">Delete</a> |
-                                   
+
                                     </td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    </body>
+    </body>
+}
+else {
+<div>
+    Om dit te kunnen doen moet u zich eerst inloggen
+    <li class="hvr-bounce-to-bottom"><a class="scroll" asp-action="Login" asp-controller="Account">Inloggen</a></li>
+</div>
+}

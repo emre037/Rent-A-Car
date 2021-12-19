@@ -12,74 +12,189 @@
     <link href="~/js/jquery-1.11.1.min.js" />
     <script src="js/bootstrap.js"></script>
     <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <script src="~/js/responsiveslides.min.js"></script>
+ 
 </head>
 <body>
+    @*
+        <div class="slideshow-container">
 
-    <div class="banner">
-        <div class="banner-title">
-            <div class="container">
-                <div id="top" class="callbacks_container">
-                    <ul class="rslides callbacks callbacks1" id="slider3">
-                        <li id="callbacks1_s0" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;" class="callbacks1_on">
-                            <div class="banner-text">
-                                <h2>Volkswagen Polo</h2>
-                                <p>
-                                    1.0 TSI Comfortline<br>
-                                    Benzine | 150Km | Handgeschakeld<br>
-                                    Voor maar €30 per dag
-                                </p>
-                                <a class="more" href="#"> Read More</a>
-                            </div>
-                        </li>
-                        <li id="callbacks1_s1" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;" class="">
-                            <div class="banner-text">
-                                <h2>CarZone Ohh </h2>
-                                <p>Vitae Deonec tellus non sem vulputate cursus. Aliquam erat volutpat. Proin ut est et sem rhoncus fringilla laoreet </p>
-                                <a class="more" href="#"> Read More</a>
-                            </div>
-                        </li>
-                        <li id="callbacks1_s2" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;" class="">
-                            <div class="banner-text">
-                                <h2>ZoneCar Ohh</h2>
-                                <p>Sem donec vitae tellus non  vulputate cursus. Aliquam erat volutpat. Proin ut est et sem rhoncus fringilla laoreet </p>
-                                <a class="more" href="#"> Read More</a>
-                            </div>
-                        </li>
-                    </ul><a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#" class="callbacks_nav callbacks1_nav next">Next</a><ul class="callbacks_tabs callbacks1_tabs"><li class="callbacks1_s1 callbacks_here"><a href="#" class="callbacks1_s1">1</a></li><li class="callbacks1_s2"><a href="#" class="callbacks1_s2">2</a></li><li class="callbacks1_s3"><a href="#" class="callbacks1_s3">3</a></li></ul>
+            <div class="mySlides fade">
+                <p>
+                    1.0 TSI Comfortline<br>
+                    Benzine | 150Km | Handgeschakeld<br>
+                    Voor maar €30 per dag
+                </p>
+                <a class="more" href="#"> Read More</a>
+                <div class="numbertext">1 / 3</div>
+                <img src="~/lib/Images/poloo.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="~/lib/Images/bmww.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="~/lib/Images/garage.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+    *@
+    <div class="slideshow-container">
+        <div class="banner mySlides ">
+            <div class="banner-title">
+                <div class="container1">
+                    <div id="top" class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider3">
+                            <li id="callbacks1_s0" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;" class="callbacks1_on">
+                                <div class="banner-text">
+                                    <h2>Volkswagen Polo</h2>
+
+                                    <p>
+                                        1.0 TSI Comfortline<br>
+                                        Benzine | 150Km | Handgeschakeld<br>
+                                        Voor maar €30 per dag
+                                    </p>
+                                    <a class="more" asp-action="Index" asp-controller="VoertuigReservatie"> Reserveer Nu</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="banner1 mySlides ">
+            <div class="banner-title">
+                <div class="container1">
+                    <div id="top" class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider3">
+                            <li id="callbacks1_s0" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;" class="callbacks1_on">
+                                <div class="banner-text">
+                                    <h2>BMW</h2>
+
+                                    <p>
+                                        M2 Coupe  <br>
+                                        Handgeschakeld | 220Km | Diesel<br>
+                                        Voor maar €60 per dag
+                                    </p>
+                                    <a class="more" asp-action="Index" asp-controller="VoertuigReservatie"> Reserveer Nu</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner2 mySlides ">
+            <div class="banner-title">
+                <div class="container1">
+                    <div id="top" class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider3">
+                            <li id="callbacks1_s0" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;" class="callbacks1_on">
+                                <div class="banner-text">
+                                    <h2>Renault</h2>
+
+                                    <p>
+                                        Megane Estate  <br>
+                                        Handgeschakeld | 180Km | Diesel<br>
+                                        Voor maar €50 per dag
+                                    </p>
+                                    <a class="more" asp-action="Index" asp-controller="VoertuigReservatie"> Reserveer Nu</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner3 mySlides ">
+            <div class="banner-title">
+                <div class="container1">
+                    <div id="top" class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider3">
+                            <li id="callbacks1_s0" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;" class="callbacks1_on">
+                                <div class="banner-text">
+                                    <h2>Tesla</h2>
+
+                                    <p>
+                                        Model 3  <br>
+                                        Automaat | 260Km | Elektrisch<br>
+                                        Voor maar €90 per dag
+                                    </p>
+                                    <a class="more"  asp-action="Index" asp-controller="VoertuigReservatie"> Reserveer Nu</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+  
+     
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+
+        <h3 class="title"></br>Contact Ons</h3>
+        <div class="col-md-7 contact-right  fadeInLeft animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+            <form>
+                <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                <input type="submit" value="Submit">
+                <div></br></div>
+            </form>
+        </div>
+        <div class="col-md-5 contact-left  fadeInRight animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+            <p>"Lorem Ipsum"is the common name dummy text often used in the design, printing, and type setting industriescommon name dummy text often used in the design, printing, and type setting industries. "</p>
+            <ul>
+                <li><span></span>Grondhuttenweg , Enschede.</li>
+
+                <li><span></span><a href="mailto:example@mail.com">RentACar@gmail.com</a></li>
+                <li><span></span>000-1234-1234</li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
 
 
 
-    <h3 class="title"></br>Contact Ons</h3>
-    <div class="col-md-7 contact-right  fadeInLeft animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
-        <form>
-            <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-            <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-            <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-            <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-            <input type="submit" value="Submit">
-            <div></br></div>
-        </form>
-    </div>
-    <div class="col-md-5 contact-left  fadeInRight animated" data-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
-        <p>"Lorem Ipsum"is the common name dummy text often used in the design, printing, and type setting industriescommon name dummy text often used in the design, printing, and type setting industries. "</p>
-        <ul>
-            <li><span></span>Grondhuttenweg , Enschede.</li>
-
-            <li><span></span><a href="mailto:example@mail.com">RentACar@gmail.com</a></li>
-            <li><span></span>000-1234-1234</li>
-        </ul>
-    </div>
-    <div class="clearfix"> </div>
-
-
- 
 </body>
-</html>
+        </html>

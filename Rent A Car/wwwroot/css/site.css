@@ -14,9 +14,41 @@
     -moz-background-size: cover;
     -ms-background-size: cover;
 }
-
+.banner1 {
+    background: url(../lib/Images/bmww.jpg) no-repeat 0px 0px;
+    left: 0;
+    min-height: 800px;
+    position: relative;
+    bottom: 1px;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+.banner2 {
+    background: url(../lib/Images/renault.jpg) no-repeat 0px 0px;
+    left: 0;
+    min-height: 800px;
+    position: relative;
+    bottom: 1px;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+.banner3 {
+    background: url(../lib/Images/Tesla.jpg) no-repeat 0px 0px;
+    left: 0;
+    min-height: 800px;
+    position: relative;
+    bottom: 1px;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
 .banner-title {
-    padding: 14em 0px;
+    padding: 26em 0px;
     position: relative;
 
 }
@@ -24,7 +56,7 @@
 
 
 .banner-text {
-    width: 30%;
+  
     color: #1f365c;
 }
 
@@ -414,7 +446,10 @@ div#bs-example-navbar-collapse-1 {
     font-weight: bold;
     color: #cccccc;
 }
+.container1{
+    padding-left:60px;
 
+}
 .image-preview__display {
     display: none;
     width: 100%;
@@ -433,255 +468,106 @@ div#bs-example-navbar-collapse-1 {
 }
 .image-preview__default-text {
 }
-#slider3, #slider4 {
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    margin: 0 auto;
+
+/* Slideshow container */
+.slideshow-container {
+  
+    position: relative;
+    margin: auto;
 }
 
-.rslides_tabs {
-    list-style: none;
-    padding: 0;
-    background: rgba(0,0,0,.25);
-    box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
-    -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
     font-size: 18px;
-    list-style: none;
-    margin: 0 auto 50px;
-    max-width: 540px;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-    .rslides_tabs li {
-        display: inline;
-        float: none;
-        margin-right: 1px;
-    }
-
-    .rslides_tabs a {
-        width: auto;
-        line-height: 20px;
-        padding: 9px 20px;
-        height: auto;
-        background: transparent;
-        display: inline;
-    }
-
-    .rslides_tabs li:first-child {
-        margin-left: 0;
-    }
-
-    .rslides_tabs .rslides_here a {
-        background: rgba(255,255,255,.1);
-        color: #fff;
-        font-weight: bold;
-    }
-
-.events {
-    list-style: none;
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.callbacks_nav {
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
     position: absolute;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    top: 47%;
-    left: 6%;
-    z-index: 3;
-    text-indent: -9999px;
-    overflow: hidden;
-    text-decoration: none;
-    height: 32px;
-    width: 32px;
-    background: transparent url("../lib/Images/icons.png") no-repeat 0px 0px;
-}
-
-    .callbacks_nav.next {
-        left: auto;
-        right: 9%;
-        background: url(../lib/Images/icons.png)no-repeat -37px 0px;
-    }
-.callbacks_container {
-    float: left;
+    bottom: 8px;
     width: 100%;
+    text-align: center;
 }
 
-.callbacks {
-    position: relative;
-    list-style: none;
-    overflow: hidden;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
-    .callbacks li {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    .callbacks img {
-        position: relative;
-        z-index: 1;
-        height: auto;
-        border: 0;
-    }
-
-
-    .callbacks_nav:active {
-        opacity: 1.0;
-    }
-
- 
-#slider3-pager a, #slider4-pager a {
-    display: inline-block;
-}
-
-#slider3-pager span, #slider4-pager span {
-    float: left;
-}
-
-#slider3-pager span, #slider4-pager span {
-    width: 100px;
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
     height: 15px;
-    background: #fff;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
     display: inline-block;
-    border-radius: 30em;
-    opacity: 0.6;
+    transition: background-color 0.6s ease;
 }
 
-#slider3-pager .rslides_here a, #slider4-pager .rslides_here a {
-    background: #FFF;
-    border-radius: 30em;
-    opacity: 1;
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-#slider3-pager a, #slider4-pager a {
-    padding: 0;
-}
-
-#slider3-pager li, #slider4-pager li {
-    display: inline-block;
-}
-
-.rslides {
-    position: relative;
-    list-style: none;
-    overflow: hidden;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-    .rslides li {
-        -webkit-backface-visibility: hidden;
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
     }
 
-    .rslides li {
-        position: relative;
-        display: block;
-        float: left;
-    }
-
-    .rslides img {
-        height: auto;
-        border: 0;
-        width: 100%;
-    }
-
-.callbacks_tabs {
-    list-style: none;
-    position: absolute;
-    bottom: 19%;
-    z-index: 111;
-    left: 14%;
-    padding: 0;
-    margin: 0;
-}
-
-.slider-top {
-    text-align: center;
-    padding: 10em 0;
-}
-
-    .slider-top h1 {
-        font-weight: 700;
-        font-size: 48px;
-        color: #010101;
-    }
-
-    .slider-top p {
-        font-weight: 400;
-        font-size: 20px;
-        padding: 1em 7em;
-        color: white;
-    }
-
-    .slider-top ul.social-slide {
-        display: inline-flex;
-        margin: 0px;
-        padding: 0px;
-    }
-
-ul.social-slide li i {
-    width: 70px;
-    height: 74px;
-    background: url(../images/img-resources.png)no-repeat;
-    display: inline-block;
-    margin: 0px 15px;
-}
-
-    ul.social-slide li i.win {
-        background-position: -6px 0px;
-    }
-
-    ul.social-slide li i.android {
-        background-position: -110px 0px;
-    }
-
-    ul.social-slide li i.mac {
-        background-position: -215px 0px;
-    }
-
-.callbacks_tabs li {
-    display: inline-block;
-    margin: 0 .5em;
-}
-
-@media screen and (max-width: 600px) {
-    .callbacks_nav {
-        top: 47%;
+    to {
+        opacity: 1
     }
 }
 
-.callbacks_tabs a {
-    visibility: hidden;
-}
-
-    .callbacks_tabs a:after {
-        content: "\f111";
-        font-size: 0;
-        font-family: FontAwesome;
-        visibility: visible;
-        display: block;
-        height: 16px;
-        border-radius: 17px;
-        width: 17px;
-        display: inline-block;
-        background: #01553D;
-        border: 2px solid #fff;
+@keyframes fade {
+    from {
+        opacity: .4
     }
 
-.callbacks_here a:after {
-    background: #3f5475;
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
 }
