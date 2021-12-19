@@ -571,3 +571,25 @@ div#bs-example-navbar-collapse-1 {
         font-size: 11px
     }
 }
+.banner4 {
+    background-image: url(../lib/Images/autowegg.jpg);
+    height: 1000px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.title1 {
+    background-color: black;
+    opacity: 0.5;
+    top: 200px;
+    border-radius: 50px;
+    position: absolute;
+    top: 14em;
+    left: 20em;
+  
+    color: gray;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    height: 200px;
+}

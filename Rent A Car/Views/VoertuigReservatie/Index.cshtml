@@ -13,7 +13,7 @@
 @if (signinManager.IsSignedIn(User))
 {
     <body>
-        <div class="loginPage2">
+        <div class="loginPage2 fadeIn animated">
             <div class="loginContainer">
                 <div class="wittevak2">
                     <div class="loginLogo">
@@ -66,8 +66,8 @@
     </body>
 }
 else {
-<div>
-    Om dit te kunnen doen moet u zich eerst inloggen
-    <li class="hvr-bounce-to-bottom"><a class="scroll" asp-action="Login" asp-controller="Account">Inloggen</a></li>
+<div class="banner4 fadeIn animated">
+    <div class="title1">Om dit te kunnen doen moet u zich eerst <br />
+    <a class="scroll" asp-action="Login" asp-controller="Account">Inloggen</a></div>
 </div>
 }
